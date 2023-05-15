@@ -22,17 +22,12 @@ jobs:
 
     steps:
       - checkout
-      - restore_cache:
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "presentation/build.gradle" }}
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
       - run:
           name: chmod permissions
           command: chmod +x ./gradlew
-      - run:
-          name: Download Dependencies
-          command: ./gradlew androidDependencies
       - run:
           name: Run Tests
           command: ./gradlew lint test
