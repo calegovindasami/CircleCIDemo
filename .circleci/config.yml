@@ -16,8 +16,9 @@ jobs:
     # See: https://circleci.com/docs/configuration-reference/#steps
     steps:
       - checkout
-      - - restore_cache:
-            key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+      - run:
+          name: "Say hello"
+          command: "echo Hello, World!"
       - run:
           name: chmod permissions
           command: chmod +x ./gradlew
