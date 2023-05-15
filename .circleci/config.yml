@@ -5,8 +5,7 @@ version: 2.1
 orbs:
   sonarqube: clicklogiq/sonarqube@1.0.1
 
-build:
-  executor: android/android
+
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/configuration-reference/#jobs
 jobs:
@@ -19,6 +18,9 @@ jobs:
     # See: https://circleci.com/docs/configuration-reference/#steps
     environment:
       JVM_OPTS: -Xmx3200m
+
+    build:
+      executor: android/android
 
     steps:
       - checkout
