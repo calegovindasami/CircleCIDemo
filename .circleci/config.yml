@@ -19,8 +19,8 @@ jobs:
     environment:
       JVM_OPTS: -Xmx3200m
 
-    build:
-      executor: android/android
+  build:
+    executor: android/android
 
     steps:
       - checkout
