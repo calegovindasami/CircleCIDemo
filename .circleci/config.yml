@@ -3,7 +3,8 @@
 version: 2.1
 
 orbs:
-  sonarqube: clicklogiq/sonarqube@1.0.1
+  android: "2.1.2"
+
 
 
 # Define a job to be invoked later in a workflow.
