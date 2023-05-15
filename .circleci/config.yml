@@ -13,7 +13,8 @@ jobs:
     build:
       docker:
         - image: cimg/base:stable
-      executor: android/android
+      executor:
+        name: android/android
 
       steps:
         - checkout
