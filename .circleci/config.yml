@@ -11,8 +11,6 @@ orbs:
 # See: https://circleci.com/docs/configuration-reference/#jobs
 jobs:
     build:
-      docker:
-        - image: cimg/base:stable
       executor:
         name: android/android
 
