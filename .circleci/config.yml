@@ -5,18 +5,18 @@ orbs:
   android: circleci/android@2.3.0
 
 jobs:
-    build:
-      executor: android/android
+  build:
+    executor: android/android
 
-      steps:
-        - checkout
-        - run:
-            name: chmod permissions
-            command: chmod +x ./gradlew
+    steps:
+      - checkout
+      - run:
+          name: chmod permissions
+          command: chmod +x ./gradlew
 
-        - run:
-            name: Build project
-            command: ./gradlew build
+      - run:
+          name: Build project
+          command: ./gradlew build
 
 
 
