@@ -23,9 +23,6 @@ jobs:
       steps:
         - checkout
         - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
-        - run:
           name: chmod permissions
           command: chmod +x ./gradlew
         - run:
